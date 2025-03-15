@@ -1,6 +1,29 @@
 const ramens = [
-    { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "shoyu.jpg", rating: 5, comment: "Delicious!" },
-    { id: 2, name: "Miso Ramen", restaurant: "Menya", image: "miso.jpg", rating: 4, comment: "Very flavorful!" },
-    { id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "tonkotsu.jpg" }
- ];
+    { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "assets/shoyu.jpg", rating: 5, comment: "Delicious!" },
+    { id: 4, name: "Nirvana Ramen", restaurant: "Ramen-ya", image: "assets/nirvana.jpg", rating: 7, comment: "Meaty" },
+    { id: 5, name: "Gyukotsu Ramen", restaurant: "Ramen-ya", image: "assets/gyukotsu.jpg", rating: 6, comment: "Wonderful" },
+    { id: 2, name: "Kojiro Ramen", restaurant: "Menya", image: "assets/kojiro.jpg", rating: 4, comment: "Very flavorful!" },
+    { id: 3, name: "Naruto Ramen", restaurant: "Ramen-ya", image: "assets/naruto.jpg", rating: 8, comment: "Very rich" },
+];
+
+
+function displayRamens(ramens) {
+    const ramenMenu = document.getElementById("display-ramen");
+    
+    ramens.forEach(ramen => {
+        const img = document.createElement("img");
+
+        img.src = ramen.image;
+        img.alt = ramen.name;
+
+        img.style.height = "150px"
+        img.style.cursor = "pointer"; 
+        img.style.margin = "10px"; 
+
+        ramenMenu.appendChild(img);
+    });
+}
+displayRamens(ramens);
+
+
 
