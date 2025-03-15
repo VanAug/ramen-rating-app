@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", main)
+
 const ramens = [
     { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "assets/shoyu.jpg", rating: 5, comment: "Delicious!" },
     { id: 4, name: "Nirvana Ramen", restaurant: "Ramen-ya", image: "assets/nirvana.jpg", rating: 7, comment: "Meaty" },
@@ -24,7 +26,6 @@ function displayRamens(ramens) {
         ramenMenu.appendChild(img);
     });
 }
-displayRamens(ramens);
 
 
 function handleClick(array) {
@@ -79,4 +80,7 @@ function addSubmitListener() {
     });
 }
 
-addSubmitListener();
+function main() {
+    displayRamens(ramens);
+    addSubmitListener();
+}
