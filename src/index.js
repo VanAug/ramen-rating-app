@@ -16,9 +16,8 @@ function displayRamens(ramens) {
         img.src = ramen.image;
         img.alt = ramen.name;
 
-        img.style.height = "150px"
-        img.style.cursor = "pointer"; 
-        img.style.margin = "10px"; 
+        img.style = "height: 150px; cursor: pointer; margin: 10px"
+ 
 
         img.addEventListener("click", () => handleClick(ramen))
 
@@ -26,6 +25,7 @@ function displayRamens(ramens) {
     });
 }
 displayRamens(ramens);
+
 
 function handleClick(array) {
     const clickRamen = document.getElementById("main-display");
@@ -49,3 +49,34 @@ function handleClick(array) {
         <p><strong>${array.comment}<strong><p>
     `
 }
+
+
+function addSubmitListener() {
+    const form = document.getElementById("rater");
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const newRamen = {
+            id: ramens.length + 1,
+            name: document.getElementById("name").value,
+            restaurant: document.getElementById("restaurant").value,
+            image: document.getElementById("image").value,
+            rating: parseInt(document.getElementById("rating").value),
+            comment: document.getElementById("comment").value
+        };
+
+        ramens.push(newRamen);
+
+        console.log(newRamen)
+        console.log(ramens)
+
+        const ramenMenu = document.getElementById("display-ramen");
+        ramenMenu.innerHTML = ""; 
+
+        displayRamens(ramens);
+        
+        form.reset();
+    });
+}
+
+addSubmitListener();
