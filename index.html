@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramen Rating</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="src/index.css">
 </head>
 <body>
+    <div id="heading">
+        <p>Ramen Rater</p>
+    </div>
+
+    <div id="display">
+        <p>display images</p>
+    </div>
+
+    <div id="main-display">
+        <p>Image</p>
+    </div>
+
+    <div id="user-input">
+        <p>Rating: </p>
+        <p>Comment:</p>
+    </div>
+
+    <div class="container">
+        <div class="head">Add New Ramen</div>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="restaurant">Restaurant:</label>
+            <input type="text" id="restaurant" required>
+            
+            <label for="image">Image:</label>
+            <input type="url" id="image" required>
+            
+            <label for="rating">Rating:</label>
+            <select id="rating" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            
+            <label for="comment">Comment:</label>
+            <textarea id="comment" required></textarea>
+            
+            <button type="submit" id="create">Create</button>
+        </form>
+    </div>
     
     <script src="src/index.js"></script>
 </body>
