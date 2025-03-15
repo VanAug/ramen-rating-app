@@ -20,10 +20,32 @@ function displayRamens(ramens) {
         img.style.cursor = "pointer"; 
         img.style.margin = "10px"; 
 
+        img.addEventListener("click", () => handleClick(ramen))
+
         ramenMenu.appendChild(img);
     });
 }
 displayRamens(ramens);
 
+function handleClick(array) {
+    const clickRamen = document.getElementById("main-display");
+    const ramenDetail = document.getElementById("ramen-detail")
+    
+    clickRamen.innerHTML = `
+        <div class = "image-container">
+            <img src="${array.image}" alt="${array.name}">
+            <div class = "overlay">
+                <h2>${array.name}</h2>
+                <h3>${array.restaurant}</h3>
+            <div>
+        <div
+    `;
 
+    ramenDetail.innerHTML = `
+        <p><strong>Rating:<strong><p>
+        <p><strong>${array.rating} /10<strong><p>
 
+        <p><strong>Comment:<strong><p>
+        <p><strong>${array.comment}<strong><p>
+    `
+}

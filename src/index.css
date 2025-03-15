@@ -56,3 +56,20 @@ button {
     cursor: pointer;
     margin-top: 10px;
 }
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+  
+.image-container img {
+    display: block;
+    height: 300px;
+}
+  
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
