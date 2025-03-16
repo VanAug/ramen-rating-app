@@ -1,17 +1,17 @@
-FOOD REVIEW.
-This application is for reviewing ramen in a restaurant.
+<h2>FOOD REVIEW<h2>.
+<p>This application is for reviewing ramen in a restaurant.<p>
 
-TECHNOLOGIES USED.
-    HTML
-    CSS
-    JavaScript
+<h2>TECHNOLOGIES USED.<h2>
+   <p> HTML<p>
+    <p>CSS<p>
+   <p> JavaScript<p>
 
-HOW TO SET IT UP.
-    Clone Repo Link.
-    cd into the repo directory.
-    Run with live server.
+<h2>HOW TO SET IT UP.<h2>
+    <p>Clone Repo Link.<p>
+    <p>cd into the repo directory.<p>
+    <p>Run with live server.<p>
 
-    #### Ensure the url attached to the form is an image url and not a website url.
+   <p> #### Ensure the url attached to the form is an image url and not a website url.#####<p>
 
-CREATED BY
-    Brian Okello
+<h2>CREATED BY<h2>
+   <p> Brian Okello<p>
