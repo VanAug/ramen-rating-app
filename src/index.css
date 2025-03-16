@@ -73,3 +73,24 @@ button {
     background: rgba(0, 0, 0, 0.5);
     color: white;
 }
+
+.ramen-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .delete-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background: red;
+    border: none;
+    width: 20px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background: black;
+  }

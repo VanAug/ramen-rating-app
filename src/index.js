@@ -7,10 +7,15 @@ const ramens = [
 ];
 
 
-function displayRamens(ramens) {
+function displayRamens(array) {
     const ramenMenu = document.getElementById("display-ramen");
     
-    ramens.forEach(ramen => {
+    array.forEach(ramen => {
+        const container = document.createElement("div");
+        const deleteBtn = document.createElement("button");
+        container.className = "ramen-container";
+        container.id = ramen.id;
+
         const img = document.createElement("img");
 
         img.src = ramen.image;
@@ -20,7 +25,15 @@ function displayRamens(ramens) {
         
         img.addEventListener("click", () => handleClick(ramen))
 
-        ramenMenu.appendChild(img);
+        deleteBtn.textContent = " x ";
+        deleteBtn.className = "delete-btn";
+        deleteBtn.id = `${ramen.name}`;
+
+        deleteBtn.addEventListener("click", () => handleDelete(ramen.id));
+
+        container.appendChild(img);
+        container.appendChild(deleteBtn);
+        ramenMenu.appendChild(container);
     });
 }
 
@@ -75,6 +88,21 @@ function addSubmitListener() {
         
         form.reset();
     });
+}
+
+
+function handleDelete(id) {
+    const index = ramens.findIndex(ramen => ramen.id === id);
+    if (index ) {
+        ramens.splice(index, 1);
+    }
+
+    console.log(ramens)
+
+    const container = document.querySelector(`[id="${id}"]`);
+    if (container) {
+        container.remove();
+    }
 }
 
 
