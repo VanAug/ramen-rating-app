@@ -81,6 +81,7 @@ function addSubmitListener() {
 function main() {
     displayRamens(ramens);
     addSubmitListener();
+    handleClick(ramens[0])
 }
 
 document.addEventListener("DOMContentLoaded", main)
